@@ -11,6 +11,6 @@ a {
 
 .container {
     width: 90%;
-    max-width: 1260px;
+    max-width: $container_width+px;
     margin: 0 auto;
 }

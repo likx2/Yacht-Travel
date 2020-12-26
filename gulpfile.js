@@ -25,7 +25,7 @@ function images() {
     return src(srcUrl + 'img/**')
         .pipe(newer(distUrl + 'img/**'))
         .pipe(imagemin())
-        .pipe(distUrl + 'img/')
+        .pipe(dest(distUrl + 'img/'))
 }
 
 function watchFiles() {

@@ -1,0 +1,90 @@
+$header__inner_max-width:1329;
+
+.header {
+    background-color: black;
+
+    &__inner {
+        width: 90%;
+        height: 78px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $header__inner_max-width+px;
+        margin: 0 auto;
+    }
+
+    &__nav {
+        width: (757/$header__inner_max-width)*100%;
+        max-width: 757px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-link {
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                display: inline-block;
+                height: 1px;
+                width: 0px;
+                background-color: #fff;
+                transition: width 0.3s;
+
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &--active {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -8px;
+                    left: 0;
+                    display: inline-block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                }
+
+                &:hover {
+                    border-bottom: none;
+
+                }
+            }
+        }
+    }
+
+    &__btn {
+        font-family: 'Montserrat',
+            sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        border-radius: 800px;
+        border: 1.5px solid #FFFFFF;
+        padding: 15px 30px;
+        color: #FFFFFF;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            border: 1.5px solid transparent;
+            background: #FFCC66;
+            color: #1C2226;
+        }
+    }
+}

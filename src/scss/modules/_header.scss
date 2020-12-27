@@ -1,7 +1,11 @@
 $header__inner_max-width:1329;
 
 .header {
-    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
 
     &__inner {
         width: 90%;
@@ -15,7 +19,6 @@ $header__inner_max-width:1329;
 
     &__nav {
         width: (757/$header__inner_max-width)*100%;
-        max-width: 757px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -26,6 +29,7 @@ $header__inner_max-width:1329;
             font-weight: 600;
             font-size: 14px;
             line-height: 120%;
+            text-transform: uppercase;
             letter-spacing: 0.02em;
             color: #FFFFFF;
 
@@ -37,12 +41,14 @@ $header__inner_max-width:1329;
                 display: inline-block;
                 height: 1px;
                 width: 0px;
-                background-color: #fff;
-                transition: width 0.3s;
-
+                background-color: transparent;
+                transition-property: width,
+                    background-color;
+                transition-duration: 0.4s;
             }
 
             &:hover::after {
+                background-color: #fff;
                 width: 100%;
             }
 

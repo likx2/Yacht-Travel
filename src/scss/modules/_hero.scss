@@ -1,0 +1,38 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__title {
+        @include hero-title();
+    }
+
+    &-index {
+        padding: 224px 0 212px;
+        background: url('../img/index-bg.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    &__link {
+        display: inline-block;
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 120%;
+        text-transform: uppercase;
+        padding: 19.5px 35px;
+        background: #FFCC66;
+        border-radius: 111px;
+        margin: 36px 0 0;
+        color: #1C2226;
+        transition: opacity 0.4s;
+        opacity: 0.85;
+
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+}

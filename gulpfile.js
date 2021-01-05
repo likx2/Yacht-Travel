@@ -22,15 +22,16 @@ function includeHtml() {
 }
 
 function images() {
-    return src(srcUrl + 'img/**')
-        .pipe(newer(distUrl + 'img/**'))
+    return src(srcUrl + 'static/img/**')
+        .pipe(newer(distUrl + 'static/img/**'))
         .pipe(imagemin())
-        .pipe(dest(distUrl + 'img/'))
+        .pipe(dest(distUrl + 'static/img/'))
 }
 
 function watchFiles() {
     watch(srcUrl + 'templates/**/*.html', includeHtml)
-    watch(srcUrl + 'img/**', images)
+    watch(srcUrl + 'static/img/**', images)
 }
 
 exports.default = watchFiles
+exports.imgMin = images

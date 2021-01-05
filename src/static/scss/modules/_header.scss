@@ -18,7 +18,8 @@ $header__inner_max-width:1329;
     }
 
     &__nav {
-        width: (757/$header__inner_max-width)*100%;
+        width: 90%;
+        max-width: 757px;
         display: flex;
         justify-content: space-between;
         align-items: center;

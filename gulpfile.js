@@ -13,7 +13,7 @@ const {
 
 
 function includeHtml() {
-    return src(srcUrl + 'templates/*.html')
+    return src(srcUrl + '/*.html')
         .pipe(fileInclude({
             prefix: '@@',
             basepath: '@file'
@@ -29,7 +29,7 @@ function images() {
 }
 
 function watchFiles() {
-    watch(srcUrl + 'templates/**/*.html', includeHtml)
+    watch(srcUrl + '**/*.html', includeHtml)
     watch(srcUrl + 'static/img/**', images)
 }
 

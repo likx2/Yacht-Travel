@@ -1,0 +1,32 @@
+.closest-tours {
+    padding: 76px 0 66px;
+
+    &__title {
+        @include section-title-style();
+        text-align: center;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin: 67px 0 0;
+
+        @media(max-width: 768px) {
+            margin: 51px 0 0;
+
+        }
+
+        @media(max-width: 576px) {
+            margin: 42px 0 0;
+
+        }
+    }
+
+    @media(max-width: 768px) {
+        padding: 51px 0 25px;
+    }
+
+    @media(max-width: 576px) {
+        padding: 42px 0 29px;
+    }
+}
